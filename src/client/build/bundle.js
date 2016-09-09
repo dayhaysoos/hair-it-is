@@ -79,9 +79,9 @@
 	    key: 'render',
 	    value: function render() {
 	      return _react2.default.createElement(
-	        'p',
-	        null,
-	        ' Hello React!'
+	        'div',
+	        { className: 'main-container' },
+	        _react2.default.createElement(_Header2.default, null)
 	      );
 	    }
 	  }]);

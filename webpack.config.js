@@ -9,8 +9,6 @@ const PATHS = {
   build: path.join(__dirname, 'src/client/build')
 };
 
-console.log(TARGET);
-
 process.env.BABEL_ENV = TARGET;
 
 const config = {
@@ -91,8 +89,8 @@ if(TARGET ==='start' || !TARGET) {
 
       //parse host and port from env so this is 
       //easy to customize
-      host: process.env.HOST,
-      port: process.env.port
+      host: process.env.HOST || 'localhost',
+      port: process.env.PORT || '8000'
     },
     plugins: [
       new webpack.HotModuleReplacementPlugin(),
