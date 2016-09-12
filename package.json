@@ -21,6 +21,7 @@
     "babel-preset-react-hmre": "^1.1.1",
     "components": "^0.1.0",
     "css-loader": "^0.25.0",
+    "history": "^4.0.0",
     "node-sass": "^3.9.3",
     "npm-install-webpack-plugin": "^4.0.4",
     "postcss-loader": "^0.13.0",
