@@ -2,7 +2,7 @@ import React from 'react';
 
 class Header extends React.Component {
 	render() {
-		return <h1>Header</h1>
+		return <div className="main-header">Header</div>
 	}
 }
 

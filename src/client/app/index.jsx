@@ -1,18 +1,16 @@
 import React from 'react';
 import {render} from 'react-dom';
-import Header from './components/Header/Header.jsx';
+import {Router, Route, hashHistory } from 'react-router';
+import Home from './components/Home/Home.jsx';
 
 //import CSS
-import CSS from './components/index.scss';
+import CSS from '../assets/styles/main.scss';
 
-class App extends React.Component {
-  render () {
-    return (
-    	<div className="main-container">
-    		<Header></Header>
-    	</div>
-    	)
-  }
-}
 
-render(<App/>, document.getElementById('app'));
+ const router = (
+  <Router history={hashHistory}>
+    <Route path="/" component={Home} />
+  </Router>
+)
+
+render(router, document.getElementById('app'));
