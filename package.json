@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "build": "webpack",
-    "start": "webpack-dev-server"
+    "start": "webpack-dev-server",
+    "test:lint": "eslint . --ext .js --ext .jsx --cache"
   },
   "repository": {
     "type": "git",
@@ -33,5 +34,11 @@
     "webpack": "^1.13.2",
     "webpack-dev-server": "^1.15.1",
     "webpack-merge": "^0.14.1"
+  },
+  "devDependencies": {
+    "eslint": "^3.5.0",
+    "eslint-plugin-react": "^6.2.1",
+    "jshint": "^2.9.3",
+    "jshint-loader": "^0.8.3"
   }
 }

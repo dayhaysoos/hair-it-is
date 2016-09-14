@@ -28250,6 +28250,8 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
+	var _reactRouter = __webpack_require__(172);
+
 	var _Header = __webpack_require__(245);
 
 	var _Header2 = _interopRequireDefault(_Header);
@@ -28282,6 +28284,11 @@
 	        'div',
 	        { className: 'main-container' },
 	        _react2.default.createElement(_Header2.default, null),
+	        _react2.default.createElement(
+	          _reactRouter.Link,
+	          { to: '/about' },
+	          'About'
+	        ),
 	        _react2.default.createElement(_Footer2.default, null)
 	      );
 	    }
@@ -28394,7 +28401,7 @@
 /* 247 */
 /***/ function(module, exports, __webpack_require__) {
 
-	"use strict";
+	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
 		value: true
@@ -28405,6 +28412,8 @@
 	var _react = __webpack_require__(1);
 
 	var _react2 = _interopRequireDefault(_react);
+
+	var _reactRouter = __webpack_require__(172);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -28424,12 +28433,21 @@
 		}
 
 		_createClass(About, [{
-			key: "render",
+			key: 'render',
 			value: function render() {
 				return _react2.default.createElement(
-					"h1",
-					{ className: "about" },
-					"About Page"
+					'div',
+					{ className: 'about-container' },
+					_react2.default.createElement(
+						'h1',
+						{ className: 'about' },
+						'About Page'
+					),
+					_react2.default.createElement(
+						_reactRouter.Link,
+						{ to: '/' },
+						'Home'
+					)
 				);
 			}
 		}]);
