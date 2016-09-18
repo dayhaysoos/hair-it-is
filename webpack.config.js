@@ -34,13 +34,11 @@ const config = {
     loaders: [
       {
         test: /\.css$/,
-        //loader: ExtractTextPlugin.extract('style-loader', 'css-loader'),
         loaders: ['style', 'css', 'sass'],
         include: PATHS.app
       },
       {
         test: /\.scss$/,
-        //loader: ExtractTextPlugin.extract('style-loader', 'css-loader!sass-loader')
         loaders: ['style', 'css', 'sass']
       },
       {
@@ -74,7 +72,7 @@ if(TARGET ==='start' || !TARGET) {
       //parse host and port from env so this is 
       //easy to customize
       host: process.env.HOST || 'localhost',
-      port: process.env.PORT || '8000'
+      port: process.env.PORT || '8080'
     },
     plugins: [
       new webpack.HotModuleReplacementPlugin(),
