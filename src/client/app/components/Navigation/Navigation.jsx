@@ -1,31 +1,44 @@
 import React from 'react';
-import { Nav, NavItem, Navbar } from 'react-bootstrap';
-import { LinkContainer } from 'react-router-bootstrap';
+import { Link } from 'react-router';
 
 class Navigation extends React.Component {
-
 	render() {
-		return ( 
-			<Navbar className="nav-container">
-				<Navbar.Header>
-					<Navbar.Brand>
-						<a href="#">Hair It Is!</a>
-					</Navbar.Brand>
-				</Navbar.Header>
-				<Nav className="nav-items">
-					<LinkContainer to="/">
-						<NavItem eventKey={1}>Home</NavItem>
-					</LinkContainer>
-					<LinkContainer to="/about">
-						<NavItem eventKey={2}>About</NavItem>
-					</LinkContainer>
-					<NavItem eventKey={3} href="#">Gallery</NavItem>
-					<NavItem eventKey={4} href="#">Cuts</NavItem>
-					<NavItem eventKey={2} href="#">Contact</NavItem>
-				</Nav>
-			</Navbar>
+		return (
+			<nav className="row">
+				<div className="title large-7 columns">Hair It Is!</div>
+				<div className="large-5 columns">
+					<div className="row">
+						<Link to={'/'} className="large-3 columns">Home</Link>
+						<Link to={'/cuts'} className="large-3 columns">Cuts</Link>
+						<Link to={'/gallery'} className="large-3 columns">Gallery</Link>
+						<Link to={'/contact'} className="large-3 columns">Contact</Link>
+					</div>
+				</div>
+			</nav>
 			)
 	}
 }
+
+// class Navigation extends React.Component {
+
+// 	render() {
+// 		return (
+// 			<div className="nav-container">
+// 				<div className="nav-header">
+// 					<div className="nav-brand">
+// 				 		<a href="/">Hair It Is!</a>
+// 					</div>
+// 				</div>
+// 				<div className="nav-items">
+// 					<div className="nav-item"><a href="/">Home</a></div>
+// 					<div className="nav-item"><a href="about">About</a></div>
+// 					<div className="nav-item"><a href="gallery">Gallery</a></div>
+// 					<div className="nav-item"><a href="cuts">Cuts</a></div>
+// 					<div className="nav-item"><a href="contact">Contact</a></div>
+// 				</div>
+// 			</div>
+// 			)
+// 	}	
+// }
 
 export default Navigation;

@@ -1,8 +1,9 @@
 @import 'vars';
-@import '../bootstrap/assets/stylesheets/bootstrap';
 
+@import '../foundation/foundation.min.css';
 @import '../../app/components/Navigation/Navigation';
 @import '../../app/components/Footer/Footer';
 @import '../../app/components/Home/Home';
 @import '../../app/components/About/About';
+@import '../../app/components/Contact/Contact';
 
